@@ -23,7 +23,7 @@
     />
     <link rel="manifest" href="/site.webmanifest" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Thank you for ever and ever</title>
+    <title>Thank you from Alejandro G.</title>
     <meta property="og:title" content="Thank you for ever and ever" />
     <meta name="twitter:title" content="Thank you for ever and ever" />
 
@@ -126,5 +126,15 @@
         ></div>
       </div>
     </div>
+    <script>
+      //write a script that gets the url param 'from' and sets the p tag as that
+      const urlParams = new URLSearchParams(window.location.search);
+      const from = urlParams.get("from");
+      if (from) {
+        document.title = `Thank you from ${from}`;
+        const p = document.querySelector("p");
+        p.innerHTML = `from ${from}`;
+      }
+    </script>
   </body>
 </html>
